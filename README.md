@@ -11,3 +11,6 @@
 7. Register two users and create sheet for user 1
 8. Open two browser and open same sheet
 9. Show time
+
+
+[Demo](https://github.com/choirool/sheet-and-chat/blob/master/demo.gif)
