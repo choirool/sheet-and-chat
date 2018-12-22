@@ -12,5 +12,4 @@
 8. Open two browser and open same sheet
 9. Show time
 
-
-[Demo](https://github.com/choirool/sheet-and-chat/blob/master/demo.gif)
+![Demo](https://github.com/choirool/sheet-and-chat/blob/master/demo.gif)
