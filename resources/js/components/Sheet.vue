@@ -13,6 +13,10 @@ export default {
     created() {
         this.setSheetSettings()
         this.laravelEcho()
+
+        setTimeout(() => {
+            this.$refs.hotTableSheet.hotInstance.selectCell(0, 0)
+        })
     },
     data(){
         return {
@@ -37,13 +41,13 @@ export default {
             }
         },
         laravelEcho() {
-            this.laravelEchoObj = Echo.join(sheetChannel)
-                                      .listenForWhisper('position', (e) => {
-                                            this.setPosition(e.x, e.y)
-                                       })
-                                       .listen('SheetUpdated', (event) => {
-                                           this.settings.data = event.sheet.content
-                                       })
+            Echo.join(sheetChannel)
+                .listenForWhisper('position', (e) => {
+                    this.setPosition(e.x, e.y)
+                })
+                .listen('SheetUpdated', (event) => {
+                    this.settings.data = event.sheet.content
+                })
         },
         afterChangeEvent(change, source) {
             if (source === 'loadData') return;
