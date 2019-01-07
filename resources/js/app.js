@@ -22,9 +22,9 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('sheet', require('./components/Sheet.vue').default);
-Vue.component('sheet', require('./components/Sheet.vue').default);
-Vue.component('chat-messages', require('./components/ChatMessages.vue').default);
-Vue.component('chat-form', require('./components/ChatForm.vue').default);
+Vue.component('chat', require('./components/Chat.vue').default);
+// Vue.component('chat-messages', require('./components/ChatMessages.vue').default);
+// Vue.component('chat-form', require('./components/ChatForm.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -33,7 +33,7 @@ Vue.component('chat-form', require('./components/ChatForm.vue').default);
  */
 
 const app = new Vue({
-    el: '#app',
+    el: '#app'/*,
     data: {
         messages: [],
         users: [],
@@ -89,5 +89,5 @@ const app = new Vue({
                 console.log(response.data);
             });
         }
-    }
+    }*/
 });
