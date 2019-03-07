@@ -8,7 +8,7 @@
                 placeholder="Type your message here..."
                 v-model="newMessage"
                 @keyup.enter="sendMessage"
-                @keyup="sendTypingEvent">
+                v-bind:keyup="sendTypingEvent">
 
         <span class="input-group-btn">
             <button class="btn btn-primary btn-sm" id="btn-chat" @click="sendMessage">
