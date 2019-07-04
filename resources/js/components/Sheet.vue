@@ -51,10 +51,11 @@ export default {
         },
         afterChangeEvent(change, source) {
             if (source === 'loadData') return;
+            console.log(change)
 
             fetch(fetchUrl, {
                 method: 'PUT',
-                body: JSON.stringify({ change: change[0] }),
+                body: JSON.stringify({ change: change[0], chages: change }),
                 headers: {
                     'X-CSRF-TOKEN': document.head.querySelector('meta[name="csrf-token"]').content,
                     'Content-Type': 'application/json'

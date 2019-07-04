@@ -80,6 +80,7 @@ class SheetController extends Controller
     {
         $sheet = Sheet::findOrFail($id);
         $change = request('change');
+        // info($request->changes);
         [$rowIndex, $columnIndex, $oldValue, $newValue] = $change;
         $sheet->content = $this->updateCell($rowIndex, $columnIndex, $newValue, $sheet->content);
         $sheet->save();
