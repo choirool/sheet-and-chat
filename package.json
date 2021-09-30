@@ -25,7 +25,7 @@
     },
     "dependencies": {
         "@handsontable/vue": "^3.1.0",
-        "handsontable": "^6.2.2",
+        "handsontable": "^10.0.0",
         "laravel-echo": "^1.5.2",
         "pusher-js": "^4.3.1"
     }
